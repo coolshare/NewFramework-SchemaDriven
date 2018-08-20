@@ -6,6 +6,7 @@ By Mark Qian 8/2018 (markqian@hotmail.com)
 <b>A. The demo page:</b> 
 
 http://coolshare.github.io/NewFramework-SchemaDriven/
+
 <b>B. Introduction:</b>
 So what is the problem?<br/><br/>
 As web software developers, our job is to automate web access experience to make web users's life easier. But what about the life of ourselves, the web developer's own life? Why do we need to repeat coding/maintain similar page over and over? Why can't we treat structure (fields in a view) of UI views like form (fields in the form, the schema of the form) as data to a view(form) renderer instead of hard coding them to build views?<br/><br/>
