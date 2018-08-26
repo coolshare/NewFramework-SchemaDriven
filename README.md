@@ -10,7 +10,7 @@ A Schema-driven UI: I am not the first one doing this but happened to have the s
   <a href="https://www.npmjs.com/package/react-schema-u" target="_blank">What is React Schema UI</a><br/>
   ...
 </ul>
-The "thing" to be driven by schema is view renderers. Many people accept using a renderer for a table but very few develops/architect do the same thing for another majority type of view, form.  People keep writing html tags for forms redundantly. We should think about this in a different way: the form info (schema) is input data of form renderer instead of html codes. In my project, each type of view such as form, table, D3 diagram has a renderer.
+The "thing" to be driven by schema is view renderers. Many people accept using a renderer for a table but very few develops/architects do the same thing for another majority type of view, form.  People keep writing html tags for forms redundantly. We should think about this in a different way: the form info (schema) is the input data of form renderer instead of html codes. In my project, each type of view such as form, table, D3 diagram has a renderer.
 <br/></br/>
 Here is the flow of schema driven:<br/>
 
