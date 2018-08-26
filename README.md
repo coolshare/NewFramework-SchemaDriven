@@ -17,7 +17,7 @@ Here is the flow of schema driven in my approach:<br/>
   <div>1. models delivered by server (either generating in case of model-driven or memually give to UI).<br/>
       <ul>
         <p> A model defined by server should contain: field list where each field has attributes like name, data type and validation info like the following:<br/>
-          ```
+          '''
           {
             "Student":{
               "fields": [
@@ -27,7 +27,7 @@ Here is the flow of schema driven in my approach:<br/>
                   ...
               ]  
             }
-          ```
+          '''
         
         </p>
       </ul>
@@ -35,7 +35,7 @@ Here is the flow of schema driven in my approach:<br/>
   <div>2. UI use the models from server as "super" classes to generate "schemas".
     <ul>
         <p> A schema contains more UI related info besides info in its model: formType, tableType, renderStle and so on. This "schema" work as a primitive UI image for that component/field, like the following:<br/>
-          ```
+          '''
           {
             "Student":{
               "fields": [
@@ -45,7 +45,8 @@ Here is the flow of schema driven in my approach:<br/>
                   ...
               ]  
             }
-          ```</p>
+          '''
+      </p>
       </ul>
   </div>
   <div>3. UI defines "views", as instances of schemas, to be used by each individual screen out of "schemas" above.
