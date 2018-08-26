@@ -27,8 +27,7 @@ Here is the flow of schema driven in my approach:<br/>
                   ...
               ]  
             }
-</pre>
-        
+</pre> 
         </p>
       </ul>
   </div>
