@@ -12,9 +12,24 @@ A Schema-driven UI: I am not the first one doing this but happened to have the s
 </ul>
 The "thing" to be driven by schema is view renderers. Many people accept using a renderer for a table but very few develops/architects do the same thing for another majority type of view, form.  People keep writing html tags for forms redundantly. We should think about this in a different way: the form info (schema) is the input data of form renderer instead of html codes. In my project, each type of view such as form, table, D3 diagram has a renderer.
 <br/></br/>
-Here is the flow of schema driven:<br/>
-
-
+Here is the flow of schema driven in my approch:<br/>
+<ul>
+  <div>1. models delivered by server (either generating in case of model-driven or memually give to UI).<br/>
+      <ul>
+        <p> A model defined by server should contain: field list where each field has attributes like name, data type and validation info</p>
+      </ul>
+  </div>
+  <div>2. UI use the models from server as "super" classes to generate "schema".
+    <ul>
+        <p> A schema contains more UI related info besides info in its model: formType, tableType, renderStle and so on</p>
+      </ul>
+  </div>
+  <div>3. UI use the models from server as "super" classes to generate "schema".
+    <ul>
+        <p> A schema contains more UI related info besides info in its model: formType, tableType, renderStle and so on</p>
+      </ul>
+  </div>
+</ul>
 
 <b>B. Problem:</b><br/>
 As web software developers, our job is to automate web experience to make web users's life easier. But what about the life of ourselves: the web developer's own life: how much do we apply the same automation back to our own coding?<br/> 
