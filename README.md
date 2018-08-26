@@ -16,17 +16,41 @@ Here is the flow of schema driven in my approach:<br/>
 <ul>
   <div>1. models delivered by server (either generating in case of model-driven or memually give to UI).<br/>
       <ul>
-        <p> A model defined by server should contain: field list where each field has attributes like name, data type and validation info</p>
+        <p> A model defined by server should contain: field list where each field has attributes like name, data type and validation info like the following:<br/>
+          ```
+          {
+            "Student":{
+              "fields": [
+                {"name":"name", "type":"string", "validate":["required"]},
+                {"name":"age", "type":"int", "validate":["required", "int"]},
+                {"name":"campus", "type":"enum", "validate":["required", "int"], "typeMap":{"0":"Hayward", "1":"San Jose", "2":"SF"},
+                  ...
+              ]  
+            }
+          ```
+        
+        </p>
       </ul>
   </div>
   <div>2. UI use the models from server as "super" classes to generate "schemas".
     <ul>
-        <p> A schema contains more UI related info besides info in its model: formType, tableType, renderStle and so on. This "schema" work as a primitive UI image for that component/field</p>
+        <p> A schema contains more UI related info besides info in its model: formType, tableType, renderStle and so on. This "schema" work as a primitive UI image for that component/field, like the following:<br/>
+          ```
+          {
+            "Student":{
+              "fields": [
+                {"name":"name", props:{"formType":"Input", "tableType":"text"}},
+                {"name":"name", props:{"formType":"Input", "tableType":"text"}},
+                {"name":"campus", props:{"formType":"Select", "tableType":"text", "typeList":["2", "0", "1"]}},
+                  ...
+              ]  
+            }
+          ```</p>
       </ul>
   </div>
-  <div>3. UI defines "views" to be used by each individual screen out of "schemas" above.
+  <div>3. UI defines "views", as instances of schemas, to be used by each individual screen out of "schemas" above.
     <ul>
-        <p> A schema can be used in many views and a view may use different fields from different schemas. In many of our screen, a "visual form" could consist of fields from different server model  objects. For example, you may want to show a "form" on your page with fields like student name, student favor course, student  </p>
+        <p> A schema can be used in many views and a view may use different fields from different schemas. In many of our screen, a "visual form" could consist of fields from different server model  objects. For example, you may want to show a "form" on your page with fields like student name, student favor course, student favor teacher.  </p>
       </ul>
   </div>
 </ul>
