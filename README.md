@@ -19,14 +19,14 @@ Here is the flow of schema driven in my approch:<br/>
         <p> A model defined by server should contain: field list where each field has attributes like name, data type and validation info</p>
       </ul>
   </div>
-  <div>2. UI use the models from server as "super" classes to generate "schema".
+  <div>2. UI use the models from server as "super" classes to generate "schemas".
     <ul>
-        <p> A schema contains more UI related info besides info in its model: formType, tableType, renderStle and so on</p>
+        <p> A schema contains more UI related info besides info in its model: formType, tableType, renderStle and so on. This "schema" work as a primitive UI image for that component/field</p>
       </ul>
   </div>
-  <div>3. UI use the models from server as "super" classes to generate "schema".
+  <div>3. UI defines "views" to be used by each individual screen out of "schemas" above.
     <ul>
-        <p> A schema contains more UI related info besides info in its model: formType, tableType, renderStle and so on</p>
+        <p> A schema can be used in many views and a view may use different fields from different schemas. In many of our screen, a "visual form" could consist of fields from different server model  objects. For example, you may want to show a "form" on your page with fields like student name, student favor course, student  </p>
       </ul>
   </div>
 </ul>
