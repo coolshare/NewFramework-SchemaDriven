@@ -18,15 +18,15 @@ Here is the flow of schema driven in my approach:<br/>
       <ul>
         <p> A model defined by server should contain: field list where each field has attributes like name, data type and validation info like the following:<br/>
 <pre>
-          {
-            "Student":{
-              "fields": [
-                {"name":"name", "type":"string", "validate":["required"]},
-                {"name":"age", "type":"int", "validate":["required", "int"]},
-                {"name":"campus", "type":"enum", "validate":["required", "int"], "typeMap":{"0":"Hayward", "1":"San Jose", "2":"SF"},
-                  ...
-              ]  
-            }
+    {
+      "Student":{
+        "fields": [
+          {"name":"name", "type":"string", "validate":["required"]},
+          {"name":"age", "type":"int", "validate":["required", "int"]},
+          {"name":"campus", "type":"enum", "validate":["required", "int"], "typeMap":{"0":"Hayward", "1":"San Jose", "2":"SF"},
+            ...
+        ]  
+      }
 </pre> 
         </p>
       </ul>
@@ -35,15 +35,15 @@ Here is the flow of schema driven in my approach:<br/>
     <ul>
         <p> A schema contains more UI related info besides info in its model: formType, tableType, renderStle and so on. This "schema" work as a primitive UI image for that component/field, like the following:<br/>
 <pre>
-          {
-            "Student":{
-              "fields": [
-                {"name":"name", props:{"formType":"Input", "tableType":"text"}},
-                {"name":"name", props:{"formType":"Input", "tableType":"text"}},
-                {"name":"campus", props:{"formType":"Select", "tableType":"text", "typeList":["2", "0", "1"]}},
-                  ...
-              ]  
-            }
+    {
+      "Student":{
+        "fields": [
+          {"name":"name", props:{"formType":"Input", "tableType":"text"}},
+          {"name":"name", props:{"formType":"Input", "tableType":"text"}},
+          {"name":"campus", props:{"formType":"Select", "tableType":"text", "typeList":["2", "0", "1"]}},
+            ...
+        ]  
+      }
 </pre>
       </p>
       </ul>
