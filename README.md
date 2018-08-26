@@ -6,13 +6,13 @@ By Mark Qian 8/2018 (markqian@hotmail.com)
 <b>A. Introduction:</b> 
 A Schema-driven UI: I am not the first one doing this but happened to have the similar idea with what others had:<br/>
 <ul>
-  <a href="https://medium.com/@hintology/sdd-schema-driven-development-f1d232d73ea6" target="_blank">SDD — Schema Driven Development</a><br/>
-  <a href="https://www.npmjs.com/package/react-schema-u" target="_blank">What is React Schema UI</a><br/>
+  <a href="https://medium.com/@hintology/sdd-schema-driven-development-f1d232d73ea6" target=_blank>SDD — Schema Driven Development</a><br/>
+  <a href="https://www.npmjs.com/package/react-schema-u" target=_blank>What is React Schema UI</a><br/>
   ...
 </ul>
 The "thing" to be driven by schema is view renderers. Many people accept using a renderer for a table but very few develops/architects do the same thing for another majority type of view, form.  People keep writing html tags for forms redundantly. We should think about this in a different way: the form info (schema) is the input data of form renderer instead of html codes. In my project, each type of view such as form, table, D3 diagram has a renderer.
 <br/></br/>
-Here is the flow of schema driven in my approch:<br/>
+Here is the flow of schema driven in my approach:<br/>
 <ul>
   <div>1. models delivered by server (either generating in case of model-driven or memually give to UI).<br/>
       <ul>
