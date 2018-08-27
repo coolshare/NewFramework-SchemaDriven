@@ -107,8 +107,8 @@ Here is the <b>flow of schema driven</b> in my approach:<br/>
       </p>
       </ul>
   </div>
-
-<div><b>5. UI handling Application logic</b>. 
+<a name="UIHandlingApplicationLogic"></a>
+<div><b>5. UI Handling Application Logic</b>. 
     <ul>
         <p> Any application built with my framework is a container containing isolated "Objects" (UI views and service). This objects has no  knowledge about others or the "application logic". For example, let's take a look at a navigation view, HeaderTab:
 <pre>
