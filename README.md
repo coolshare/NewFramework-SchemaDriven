@@ -86,5 +86,30 @@ Here is the <b>flow of schema driven</b> in my approach:<br/>
       </ul>
   </div>
 </ul>
-
+<div><b>5. UI handling Application logic</b>. 
+    <ul>
+        <p> Any application built with my framework is a container containing isolated "Objects" (UI views and service). This objects has know knowledge about others or the "application logic". For example, let's take a look at a navigation view, HeaderTab:
+<pre>
+      "HeaderTab":{
+        "fields": [
+          {"name":"StudentTab", "props":{"formType":"Button", "route":{"viewType":"Screen"}}},
+          {"name":"TeacherTab", "props":{"formType":"Button", "route":{"viewType":"Screen"}}},
+          {"name":"CampusTab", "props":{"formType":"Button", "route":{"viewType":"Dialog"}}},
+            ...
+        ]  
+      }
+</pre> 
+      As you can see above, there is only a "route" attribute that includes no info about what to do after "StudentTab" is clicked! This is key of my design: <b>no appliaction logic resides in codes!</b>. The application logic will be loaded as data at runtime in json file as following:
+<pre>
+  "Route":{
+      "HeaderTab.StudentTab":"StudentView",
+      "HeaderTab.TeacherTab":"TeacherView",
+      "HeaderTab.CampusTab":"CampusTabView",
+        ... 
+  }
+</pre>
+      </p>
+      </ul>
+  </div>
+</ul>
 (Under construction)
