@@ -64,7 +64,7 @@ Here is the <b>flow of schema driven</b> in my approach:<br/>
         "fields": [
           {"name":"id", props:{"formType":"Hidden", "tableType":"Hidden"}},
           {"name":"name", props:{"formType":"Input", "tableType":"text"}},
-          {"name":"name", props:{"formType":"Input", "tableType":"text"}},
+          {"name":"age", props:{"formType":"Input", "tableType":"text"}},
             ...
         ]  
       }
