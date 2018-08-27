@@ -44,7 +44,7 @@ Here is the <b>flow of schema driven</b> in my approach:<br/><br/>
       },
       "Campus":{
         "fields": [
-          {"name":"id", "type":"string", "validate":[], "typeMap":{"0":"Hayward", "1":"San Jose", "2":"SF"},
+          {"name":"id", "type":"enum", "validate":[], "typeMap":{"0":"Hayward", "1":"San Jose", "2":"SF"},
           {"name":"name", "type":"string", "validate":["required"]},
           {"name":"address", "type":"string", "validate":["required"]},  
           {"name":"totalStuden", "type":"int", "validate":[]},  
