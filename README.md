@@ -145,7 +145,7 @@ Here is the <b>flow of schema driven</b> in my approach:<br/>
           {"path":"Student.name"},
           {"path":"Student.id"},
           {"path":"Course.name", props:{"label":"Most frequently taking course"}},
-          {"path":"Campus.name", props:{"typeList":["1", "2", "0"], "<b>pub</b>":{"type":"/Updated/StudentView/Campus.name"}}},
+          {"path":"Campus.name", props:{"typeList":["1", "2", "0"], "<b>pub</b>":{"type":"/Updated/StudentView/Campus.name", {"event":"change"}}},
             ...
         ]  
       },
@@ -162,7 +162,8 @@ Here is the <b>flow of schema driven</b> in my approach:<br/>
             }            
         }
       }
-</pre>          
+</pre>   
+As you can see above, field "Campus.name" register a topic "/Updated/StudentView/Campus.name" for an event of "change" and "CanpusView" subscribe the topic at view level and then handle the update there.
       </p>
       </ul>
   </div>
