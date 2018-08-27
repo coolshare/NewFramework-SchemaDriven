@@ -97,7 +97,7 @@ Here is the <b>flow of schema driven</b> in my approach:<br/>
         ]  
       }
 </pre>
-      As you can see above, fields in each view definition will overwrite the props with the same name in the "schema" so that each view can have its own characters.
+      As you can see above, fields in each view definition will overwrite the props with the same name in the "schema" so that each view can have its own characters. For example, "StudentView" and "TeacherView" both contain "Campus.name" but each wants to display the campus names in its own order so they use "typeList" to tell the order differently
       </p>
       </ul>
   </div>
