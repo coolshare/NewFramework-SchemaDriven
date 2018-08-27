@@ -27,6 +27,29 @@ Here is the <b>flow of schema driven</b> in my approach:<br/>
           {"name":"campus", "type":"enum", "validate":["required", "int"], "typeMap":{"0":"Hayward", "1":"San Jose", "2":"SF"},
             ...
         ]  
+      },
+      "Teacher":{
+        "fields": [
+          {"name":"id", "type":"string", "validate":[]},
+          {"name":"name", "type":"string", "validate":["required"]},
+            ...
+        ]  
+      },
+      "Course":{
+        "fields": [
+          {"name":"id", "type":"string", "validate":[]},
+          {"name":"name", "type":"string", "validate":["required"]},
+            ...
+        ]  
+      },
+      "Campus":{
+        "fields": [
+          {"name":"id", "type":"string", "validate":[], "typeMap":{"0":"Hayward", "1":"San Jose", "2":"SF"},
+          {"name":"name", "type":"string", "validate":["required"]},
+          {"name":"address", "type":"string", "validate":["required"]},  
+          {"name":"totalStuden", "type":"int", "validate":[]},  
+            ...
+        ]  
       }
 </pre> 
         </p>
@@ -42,7 +65,6 @@ Here is the <b>flow of schema driven</b> in my approach:<br/>
           {"name":"id", props:{"formType":"Hidden", "tableType":"Hidden"}},
           {"name":"name", props:{"formType":"Input", "tableType":"text"}},
           {"name":"name", props:{"formType":"Input", "tableType":"text"}},
-          {"name":"campus", props:{"formType":"Select", "tableType":"text", "typeList":["2", "0", "1"]}},
             ...
         ]  
       }
@@ -60,7 +82,7 @@ Here is the <b>flow of schema driven</b> in my approach:<br/>
           {"path":"Student.name"},
           {"path":"Student.id"},
           {"path":"Course.name", props:{"label":"Most frequently taking course"}},
-          {"path":"Campus.address", props:{"typeList":["1", "2", "0"]}},
+          {"path":"Campus.name", props:{"typeList":["1", "2", "0"]}},
             ...
         ]  
       },
@@ -69,7 +91,7 @@ Here is the <b>flow of schema driven</b> in my approach:<br/>
           {"path":"Teacher.name"},
           {"path":"Student.name", props:{"label":"Favor Student"}},
           {"path":"Course.name", props:{"label":"Most frequently involved course"}},
-          {"path":"Campus.address", props:{"label":"Closest campus", "typeList":["0", "2", "1"]}},
+          {"path":"Campus.name", props:{"label":"Closest campus", "typeList":["0", "2", "1"]}},
             ...
         ]  
       }
@@ -78,14 +100,13 @@ Here is the <b>flow of schema driven</b> in my approach:<br/>
       </p>
       </ul>
   </div>
-</ul>
 <div><b>4. UI renders "views"</b>. 
     <ul>
         <p> My framework provides a variety of renderers like Form, Table, D3Canvas, LineChart and so on. In this way, it is much easy to apply systematic approaches like validation, submission, data loading. For example, for most "regular" forms, there is not codes are needed to load and submit data since the framework will introspect the "fieldList" in views above to obtain what need to be loaded and submitted: the framework know for the "TeacherView", it need to load data form model/object Teacher, Student and Campus and similarly when submiting.
       </p>
       </ul>
   </div>
-</ul>
+
 <div><b>5. UI handling Application logic</b>. 
     <ul>
         <p> Any application built with my framework is a container containing isolated "Objects" (UI views and service). This objects has know knowledge about others or the "application logic". For example, let's take a look at a navigation view, HeaderTab:
@@ -112,5 +133,38 @@ Here is the <b>flow of schema driven</b> in my approach:<br/>
       </p>
       </ul>
   </div>
-</ul>
+
+<div><b>6. Each field handle special interaction</b>. 
+    <ul>
+        <p> Each field may have some special need to send or received event/data. So Pub/Sub is now in place. For example, when the field "Campus.name" in "StudentView" is changed, we want to give "CanpusView" a chance to update its "Canpus.totalStuden":
+<pre>
+    {
+      "StudentView":{
+        "fieldList": [
+          {"path":"Student.name"},
+          {"path":"Student.id"},
+          {"path":"Course.name", props:{"label":"Most frequently taking course"}},
+          {"path":"Campus.name", props:{"typeList":["1", "2", "0"], "pub":{"type":"/Updated/StudentView/Campus.name"}}},
+            ...
+        ]  
+      },
+      "CanpusView":{
+        "fieldList": [
+          {"path":"Canpus.name"},
+          {"path":"Canpus.totalStuden", props:{"label":"Total Number of Student"}},
+            ...
+        ],
+        "props":{
+            "sub":{"type":"/Updated/StudentView/Campus.name", "handler":function() {
+              //make update here
+              
+            }            
+        }
+      }
+</pre>          
+      </p>
+      </ul>
+  </div>
+
+
 (Under construction)
