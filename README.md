@@ -3,7 +3,7 @@ New Framework: a Schema Driven UI
 
 By Mark Qian 8/2018 (markqian@hotmail.com)
 
-<b>A. Introduction:</b> 
+<b>A. Introduction:</b><br/> 
 A Schema-driven UI: I am not the first one doing this but happened to have the similar idea with what others had:<br/>
 <ul>
   <a href="https://medium.com/@hintology/sdd-schema-driven-development-f1d232d73ea6" target=_blank>SDD — Schema Driven Development</a><br/>
@@ -69,6 +69,7 @@ Here is the <b>flow of schema driven</b> in my approach:<br/>
         ]  
       }
 </pre>
+      The framework will generate a "default" schema for each model while the props specified in schema above overwrites props in generated default props. So if no specified in schema, defaults will be applied like "formType":"Input" and "tableType":"text".
       </p>
       </ul>
   </div>
