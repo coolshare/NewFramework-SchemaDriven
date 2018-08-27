@@ -14,7 +14,7 @@ The "thing" to be driven by schema is view renderers. Many people accept using a
 <br/></br/>
 Here is the flow of schema driven in my approach:<br/>
 <ul>
-  <div>1. models delivered by server (either generating in case of model-driven or memually give to UI).<br/>
+  <div><b>1. models delivered by server</b> (either generating in case of model-driven or memually give to UI).<br/>
       <ul>
         <p> A model defined by server should contain: field list where each field has attributes like name, data type and validation info like the following:<br/>
 <pre>
@@ -32,7 +32,7 @@ Here is the flow of schema driven in my approach:<br/>
         </p>
       </ul>
   </div>
-  <div>2. UI use the models from server as "super" classes to generate "schemas".
+  <div><b>2. UI use the models from server as "super" classes to generate "schemas"</b>.
     <ul>
         <p> A schema contains more UI related info besides info in its model: formType, tableType, renderStle and so on. This "schema" work as a primitive UI image for that component/field, like the following:<br/>
 <pre>
@@ -50,7 +50,7 @@ Here is the flow of schema driven in my approach:<br/>
       </p>
       </ul>
   </div>
-  <div>3. UI defines "views", as instances of schemas, to be used by each individual screen out of "schemas" above.
+  <div><b>3. UI defines "views", as instances of schemas, to be used by each individual screen out of "schemas" above.</b>
     <ul>
         <p> A schema can be used in many views and a view may use different fields from different schemas. In many of our screen, a "visual form" could consist of fields from different server model  objects. For example, you may want to show couple "forms" on your page with fields like student name, student favor course, student campus address, like the following:<br/>
 <pre>
@@ -79,7 +79,7 @@ Here is the flow of schema driven in my approach:<br/>
       </ul>
   </div>
 </ul>
-<div>4. UI renders "views". 
+<div><b>4. UI renders "views"</b>. 
     <ul>
         <p> My framework provides a variety of renderers like Form, Table, D3Canvas, LineChart and so on. In this way, it is much easy to apply systematic approaches like validation, submission, data loading. For example, for most "regular" forms, there is not codes are needed to load and submit data since the framework will introspect the "fieldList" in views above to obtain what need to be loaded and submitted: the framework know for the "TeacherView", it need to load data form model/object Teacher, Student and Campus and similarly when submiting.
       </p>
