@@ -16,7 +16,7 @@ Here is the <b>flow of schema driven</b> in my approach:<br/><br/>
 <ul>
   <div><b>1. models delivered by server</b> (either generating in case of model-driven or memually give to UI).<br/>
       <ul>
-        <p> A model defined by server should contain: field list where each field has attributes like name, data type and validation info like the following:<br/>
+        <p> Models defined by server should contain: field list where each field has attributes like name, data type and validation info like the following:<br/>
 <pre>
     {
       "Student":{
