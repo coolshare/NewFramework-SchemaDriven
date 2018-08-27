@@ -142,8 +142,8 @@ Here is the <b>flow of schema driven</b> in my approach:<br/><br/>
       </p>
       </ul>
   </div>
-
-<div><b>6. Each field handle special interaction</b>. 
+<a name="EachFieldHandleSpecialInteraction"></a>
+<div><b>6. Each Field Handle Special Interaction</b>. 
     <ul>
         <p> Each field may have some special need to send or received event/data. So Pub/Sub is now in place. For example, when the field "Campus.name" in "StudentView" is changed, we want to give "CanpusView" a chance to update its "Canpus.totalStuden":
 <pre>
