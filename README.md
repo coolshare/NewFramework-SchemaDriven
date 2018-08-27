@@ -12,7 +12,7 @@ A Schema-driven UI: I am not the first one doing this but happened to have the s
 </ul>
 The "thing" to be driven by schema is view renderers. Many people accept using a renderer for a table but very few develops/architects do the same thing for another majority type of view, form.  People keep writing html tags for forms redundantly. We should think about this in a different way: the form info (schema) is the input data of form renderer instead of html codes. In my project, each type of view such as form, table, D3 diagram has a renderer.
 <br/></br/>
-Here is the <b>flow of schema driven</b> in my approach:<br/>
+Here is the <b>flow of schema driven</b> in my approach:<br/><br/>
 <ul>
   <div><b>1. models delivered by server</b> (either generating in case of model-driven or memually give to UI).<br/>
       <ul>
