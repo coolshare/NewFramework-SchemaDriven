@@ -145,7 +145,7 @@ Here is the <b>flow of schema driven</b> in my approach:<br/>
           {"path":"Student.name"},
           {"path":"Student.id"},
           {"path":"Course.name", props:{"label":"Most frequently taking course"}},
-          {"path":"Campus.name", props:{"typeList":["1", "2", "0"], "pub":{"type":"/Updated/StudentView/Campus.name"}}},
+          {"path":"Campus.name", props:{"typeList":["1", "2", "0"], "<b>pub</b>":{"type":"/Updated/StudentView/Campus.name"}}},
             ...
         ]  
       },
@@ -156,7 +156,7 @@ Here is the <b>flow of schema driven</b> in my approach:<br/>
             ...
         ],
         "props":{
-            "sub":{"type":"/Updated/StudentView/Campus.name", "handler":function() {
+            "<b>sub</b>":{"type":"/Updated/StudentView/Campus.name", "handler":function() {
               //make update here
               
             }            
