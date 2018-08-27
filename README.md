@@ -102,7 +102,7 @@ Here is the <b>flow of schema driven</b> in my approach:<br/>
   </div>
 <div><b>4. UI renders "views"</b>. 
     <ul>
-        <p> My framework provides a variety of renderers like Form, Table, D3Canvas, LineChart and so on. In this way, it is much easy to apply systematic approaches like validation, submission, data loading. For example, for most "regular" forms, there is not codes are needed to load and submit data since the framework will introspect the "fieldList" in views above to obtain what need to be loaded and submitted: the framework know for the "TeacherView", it need to load data form model/object Teacher, Student and Campus and similarly when submiting.
+        <p> My framework provides a variety of renderers like Form, Table, D3Canvas, LineChart and so on. In this way, it is much easy to apply systematic approaches like validation, submission, data loading. For example, for most "regular" forms, there is not codes are needed to load and submit data since the framework will introspect the "fieldList" in views above to obtain what need to be loaded and submitted: for "TeacherView", the framework needs to load data from model/object Teacher, Student and Campus and similarly when submiting.
       </p>
       </ul>
   </div>
