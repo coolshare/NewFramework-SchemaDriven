@@ -108,6 +108,7 @@ Here is the <b>flow of schema driven</b> in my approach:<br/>
         ... 
   }
 </pre>
+      The key of the map above is the unique id of each field such as "HeaderTab.StudentTab" and the value is the unique name of the view
       </p>
       </ul>
   </div>
