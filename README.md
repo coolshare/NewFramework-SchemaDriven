@@ -83,7 +83,7 @@ Here is the <b>flow of schema driven</b> in my approach:<br/>
           {"path":"Student.name"},
           {"path":"Student.id"},
           {"path":"Course.name", props:{"label":"Most frequently taking course"}},
-          {"path":"Campus.name", props:{"typeList":["1", "2", "0"]}},
+          {"path":"Campus.name", props:{"typeList":<b>["1", "2", "0"]</b>}},
             ...
         ]  
       },
@@ -92,7 +92,7 @@ Here is the <b>flow of schema driven</b> in my approach:<br/>
           {"path":"Teacher.name"},
           {"path":"Student.name", props:{"label":"Favor Student"}},
           {"path":"Course.name", props:{"label":"Most frequently involved course"}},
-          {"path":"Campus.name", props:{"label":"Closest campus", "typeList":["0", "2", "1"]}},
+          {"path":"Campus.name", props:{"label":"Closest campus", "typeList":<b>["0", "2", "1"]</b>}},
             ...
         ]  
       }
@@ -114,7 +114,7 @@ Here is the <b>flow of schema driven</b> in my approach:<br/>
 <pre>
       "HeaderTab":{
         "fields": [
-          {"name":"StudentTab", "props":{"formType":"Button", "route":{"viewType":"Screen"}}},
+          {"name":"StudentTab", "props":{"formType":"Button", "<b>route</b>":{"viewType":"Screen"}}},
           {"name":"TeacherTab", "props":{"formType":"Button", "route":{"viewType":"Screen"}}},
           {"name":"CampusTab", "props":{"formType":"Button", "route":{"viewType":"Dialog"}}},
             ...
