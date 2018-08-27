@@ -109,7 +109,7 @@ Here is the <b>flow of schema driven</b> in my approach:<br/>
 
 <div><b>5. UI handling Application logic</b>. 
     <ul>
-        <p> Any application built with my framework is a container containing isolated "Objects" (UI views and service). This objects has know knowledge about others or the "application logic". For example, let's take a look at a navigation view, HeaderTab:
+        <p> Any application built with my framework is a container containing isolated "Objects" (UI views and service). This objects has no  knowledge about others or the "application logic". For example, let's take a look at a navigation view, HeaderTab:
 <pre>
       "HeaderTab":{
         "fields": [
