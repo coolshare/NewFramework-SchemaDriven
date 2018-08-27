@@ -95,9 +95,17 @@ Here is the <b>flow of schema driven</b> in my approach:<br/><br/>
           {"path":"Campus.name", props:{"label":"Closest campus", "typeList":<b>["0", "2", "1"]</b>}},
             ...
         ]  
+      },
+      //Nested View
+      "CombinedView": {
+        "fields": [
+          {"name":"studenView", props:{"schemaName":"StudentView"}},
+          {"name":"teacherView", props:{"schemaName":"TeacherView"}},
+            ...
+        ]  
       }
 </pre>
-      As you can see above, fields in each view definition will overwrite the props with the same name in the "schema" so that each view can have its own characters. For example, "StudentView" and "TeacherView" both contain "Campus.name" but each wants to display the campus names in its own order so they use "typeList" to tell the order differently
+      As you can see above, fields in each view definition will overwrite the props with the same name in the "schema" so that each view can have its own characters. For example, "StudentView" and "TeacherView" both contain "Campus.name" but each wants to display the campus names in its own order so they use "typeList" to tell the order differently. View can be nested like "CombinedView" above
       </p>
       </ul>
   </div>
