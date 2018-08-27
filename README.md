@@ -14,7 +14,7 @@ The "thing" to be driven by schema is view renderers. Many people accept using a
 <br/></br/>
 Here is the <b>flow of schema driven</b> in my approach:<br/><br/>
 <ul>
-  <div><b>1. models delivered by server</b> (either generating in case of model-driven or memually give to UI).<br/>
+  <div><b>1. Models delivered by server</b> (either generating in case of model-driven or memually give to UI).<br/>
       <ul>
         <p> Models defined by server should contain: field list where each field has attributes like name, data type and validation info like the following:<br/>
 <pre>
