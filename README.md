@@ -74,11 +74,11 @@ Here is the flow of schema driven in my approach:<br/>
         ]  
       }
 </pre>
+      As you can see above, fields in each view definition will overwrite the props with the same name in the "schema" so that each view can have its own characters.
       </p>
       </ul>
   </div>
 </ul>
-As you can see above, fields in each view definition will overwrite the props with the same name in the "schema" so that each view can have its own characters.
 
 
 (Under construction)
