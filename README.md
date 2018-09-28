@@ -17,6 +17,7 @@ The major benefits include:<br/>
   <li>Collecting view data for submission automatically</li>
   <li>For most regular view like regular forms and tables, the views are rendered by "built-in" framework renderers. So no layout coding for the framework users</li>
   <li>Validation in a systematic way</li>
+  <li>Unit Testing in a systematic way</li>
 </ul>
 
 <br/></br/>
