@@ -106,8 +106,8 @@ Here is the <b>flow of schema driven</b> in my approach:<br/><br/>
       //Nested View
       "CombinedView": {
         "fields": [
-          {"name":"studenView", props:{"schemaName":"StudentView"}},
-          {"name":"teacherView", props:{"schemaName":"TeacherView"}},
+          {"name":"studenView", props:{"schemaName":"StudentView", "showFun":function() {return this.getValue("CurrentView}==="student"}},
+          {"name":"teacherView", props:{"schemaName":"TeacherView", "showFun":function() {return this.getValue("CurrentView}==="teacher"}},
             ...
         ]  
       }
