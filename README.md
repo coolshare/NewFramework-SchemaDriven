@@ -20,7 +20,7 @@ The major benefits include:<br/>
 
 <br/></br/>
 Here is the <b>flow of schema driven</b> in my approach:<br/><br/>
-<img src=""/><br/>
+<img src="https://github.com/coolshare/NewFramework-SchemaDriven/blob/master/ClassDiagram.png"/><br/>
 <ul>
   <div><b>1. Models delivered by server</b> (either generated from model-driven server side or given memually to UI).<br/>
       <ul>
